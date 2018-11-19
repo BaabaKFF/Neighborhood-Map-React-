@@ -1,0 +1,223 @@
+/* 
+General styles for body
+*/
+
+#header {
+text-align: center;
+background-color: rgb(252, 182, 205);
+margin: 10px;
+}
+
+
+*, 
+*::before, 
+*::after {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+}
+
+/* 
+General styles for map, including minor overrides
+*/
+
+.map {
+    z-index: -1;
+    height: 100%;
+}
+
+/* 
+Map controls overrides
+*/
+
+.gmnoprint {
+    display: none;
+}
+
+.gm-style button {
+    display: none;
+}
+
+/*
+Google InfoWindow overrides 
+*/
+
+.gm-style div div div div div div {
+    opacity: 0.95;
+    border-radius: 5px;
+}
+
+div#iw-container a {
+    text-decoration: none;
+    color: black;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+div#iw-container img {
+    margin-top: 5px;
+    border-radius: 10px;
+    opacity: 0.95;
+}
+
+div#iw-container a:hover {
+    color: rgb(240, 178, 64);
+}
+
+/* 
+General styles for SearchBar component, including list and child elements (chevrons, 
+although those are largely handled by @fontawesome-react imports.
+*/
+
+.search {
+    z-index: 1;
+    position: fixed;
+    bottom: 5px;
+    left: 5px;
+    width: 420px;
+    border: 1px solid rgba(204, 198, 198, 0.7);
+    opacity: 0.8;
+    padding: 0;
+    margin: 0;
+}
+
+.search-field {
+    width: 100%;
+    padding: 10px 0;
+    padding-left: 10px;
+    border: none;
+    border-bottom: 1px solid rgb(204, 198, 198);
+    font-size: 16px;
+    background-color:  rgb(248, 232, 238);
+}
+
+ul {
+    background:  rgb(248, 234, 239);
+    color: black;
+    padding: 0px;
+    margin: 0;
+    width: 100%;
+    max-height: 250px;
+    border: none;
+    list-style-type: none;
+}
+
+.location-item {
+    display: block;
+    list-style-type: none;
+    text-decoration: none;
+    color: rgba(7, 6, 6, 0.9);
+    cursor: pointer;
+    padding: 5px;
+}
+
+.list:hover {
+    background-color: #3f689e;
+    color: rgba(7, 6, 6, 0.9);
+}
+
+/* 
+Button component used in Select panel
+*/
+
+.button {
+    text-align: center;
+    padding: 5px;
+    background-color: rgb(247, 164, 191);
+    border: none;
+    cursor: pointer;
+    width: 100%;
+}
+
+.search-header {
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    text-align: center;
+    padding: 10px 0;
+    border-bottom: 1px solid rgb(204, 198, 198);
+}
+
+/* 
+Select component text input field
+*/
+
+.css-10nd86i {
+    margin: 10px 30px;
+    grid-area: select;
+}
+
+/* 
+Arrow button changes orientation depending on user hiding/showing Select panel
+*/
+
+.options-arrow {
+    transform: rotate(90deg);
+    float: right;
+}
+
+.toggle-select {
+    height: 100%;
+    width: 100%;
+    grid-area: toggle;
+    background: white;
+    opacity: 0.9;
+    border: none;
+    outline: 0.5px solid #e4dfdf;
+    /* overflow: hidden; */
+    cursor: pointer;
+    transition: all ease 0.3s;
+}
+
+.toggle-select:hover {
+    opacity: 1;
+    outline: 1px solid rgb(179, 232, 241);
+    background: rgb(188, 244, 248);
+}
+
+.toggle-select:active {
+    box-shadow: 2px 3px 5px #bcbec2;
+}
+
+.toggle-select:active:after {
+    box-shadow: none;
+}
+
+/* 
+Practically invisible aria-label elements kept in original tab order
+*/
+
+.aria-label {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    border: 0;
+}
+
+/* 
+Media queries 
+*/
+
+@media screen and (max-width: 600px) {
+    .search {
+        bottom: 0;
+        left: 0;
+        margin: 0;
+        width: 100%;
+    }
+    ul {
+        overflow-y: scroll;
+        overflow-x: hidden;
+        height: 100%;
+        width: 100%;
+    }
+}

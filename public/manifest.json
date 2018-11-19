@@ -1,0 +1,15 @@
+{
+  "name": "My Neighborhood Map",
+  "short_name": "neighborhood-map",
+  "icons": [
+    {
+      "src": "logo.png",
+      "sizes": "16x16",
+      "type": "image/png"
+    }
+  ],
+  "start_url": "./index.html",
+  "display": "standalone",
+  "theme_color": "#459ce2",
+  "background_color": "#cdd6dd"
+}
