@@ -34,11 +34,11 @@ export const InjectMapScript = src => {
     return returnStr;
   };
   
-  export const mapScriptUrl = `https://maps.googleapis.com/maps/api/js?key=AIzaSyBtfnZ6N6bacxKS0861rTOfDAmGkEQpuRs&libraries=places&callback=initMap`;
+  export const mapScriptUrl = `https://maps.googleapis.com/maps/api/js?key=YOUR_GOOGLE_API&libraries=places&callback=initMap`;
   
   export const fourSquareURL = marker => {
-    const fourSquareClientId = `BNQIDOE1JIW5EUV1GS3WU2XWFYIVHOK4MUV4K41IU2GWYR5T`;
-    const fourSquareClientSecret = `3XHDBXGQNCEILPF0IR2OZHYR11IBRBRBYD12KM1RYZNG2QLJ`;
+    const fourSquareClientId = `YOUR_FOURSQUARE_CLIENT_ID`;
+    const fourSquareClientSecret = `YOUR_FOURSQUARE_CLIENT_SECRET`;
     return `https://api.foursquare.com/v2/venues/${
       marker.fourSqId
     }/photos?client_id=${
